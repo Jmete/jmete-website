@@ -85,7 +85,7 @@
 
                     <button class="opacity-80 hover:opacity-100 hover:bg-slate-200 text-slate-100 hover:text-slate-800 border-2 border-slate-100 font-bold py-2 px-5 rounded-full inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                           </svg>
                         <span>Resume</span>
                     </button>
@@ -149,35 +149,195 @@
 
 
             </aside>
-            <main class="flex-1">
-                <div class="h-96 bg-stone-50 p-10 divide-y-2 divide-med-gold/25">
+            <main class="flex-1 bg-stone-50">
+                <div class="p-10 divide-y-2 divide-med-gold/25">
                     <div class="mb-2">
-                        <h1 class="text-4xl text-slate-900 font-extrabold">Data Science</h1>
+                        <h1 class="text-4xl text-slate-800 font-extrabold">Data Science</h1>
                         <!-- <h1 class="text-xl text-slate-600">Creating Order Out Of Chaos</h1> -->
                         <h1 class="text-xl text-transparent bg-clip-text bg-gradient-to-r 
                         from-med-gold via-light-gold to-dark-gold">Creating Order Out Of Chaos</h1>
                     </div>
-                    <div class="pt-4">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit numquam repudiandae quo, ipsam, molestias fuga perspiciatis quia facilis recusandae tempora sequi sint doloribus voluptate, et amet nobis eos error sed?
-                        </p>
+                    
+                    <!-- BEGIN CARD ROW -->
+
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-4">
+                        <!-- Card One -->
+                        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-stone-50">
+                            <img class="w-full h-48" src="../images/Feature Polarity Density Charts.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Sentiment Analysis of Online Platforms</div>
+                              <p class="text-gray-700 text-base">
+                                A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on. 
+                              </p>
+                            </div>
+                            <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Pandas</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Spark</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Plotly</span>
+                              </div>
+  
+  
+                              <div class="ml-6 pb-5">
+                                  <button class=" opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                        </svg>
+                                      <span>Report</span>
+                                  </button>
+                              </div>
+                          </div>
+
+                        <!-- Card Two -->
+                        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-stone-50">
+                            <img class="w-full h-48" src="../images/savethedislikes-website.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Predicting Youtube Dislikes</div>
+                              <p class="text-gray-700 text-base">
+                                A complete machine learning pipeline to download / scrape, process, and analyze millions of Youtube data to train a model to predict dislikes and alert the user if a video is potentially probelmatic through a webapp that can process submitted videos.
+                              </p>
+                            </div>
+                            <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Django</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">ML/AI</span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">SKLearn</span>
+                              </div>
+  
+  
+                              <div class="ml-6 pb-5">
+                                  <button class=" opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                      </svg>
+                                      <span>Webapp</span>
+                                  </button>
+                              </div>
+                          </div>
+
+                        <!-- Card Three -->
+                        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-stone-50">
+                            <img class="w-full h-48" src="../images/Feature Polarity Density Charts.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Sentiment Analysis of Online Platforms</div>
+                              <p class="text-gray-700 text-base">
+                                A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on. 
+                              </p>
+                            </div>
+
+                            <div class="px-6 pt-4 pb-2">
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Pandas</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Spark</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Plotly</span>
+                            </div>
+
+
+                            <div class="ml-6 pb-5">
+                                <button class=" opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                      </svg>
+                                    <span>Report</span>
+                                </button>
+                            </div>
+
+                          </div>
+
                     </div>
+
+                    <!-- END CARD ROW -->
                 </div>
-                <div class="h-96 bg-stone-50 p-10 divide-y-2 divide-med-gold/25">
+                <div class="p-10 divide-y-2 divide-med-gold/25">
                     <div class="mb-2">
-                        <h1 class="text-4xl text-slate-900 font-extrabold">Design</h1>
+                        <h1 class="text-4xl text-slate-800 font-extrabold">Design</h1>
                         <h1 class="text-xl text-xl text-transparent bg-clip-text bg-gradient-to-r 
                         from-med-gold via-light-gold to-dark-gold">Beautiful, Just Like You</h1>
                     </div>
-                    <div class="pt-4">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit numquam repudiandae quo, ipsam, molestias fuga perspiciatis quia facilis recusandae tempora sequi sint doloribus voluptate, et amet nobis eos error sed?
-                        </p>
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-4">
+                        <!-- Card One -->
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                            <img class="w-full h-48" src="../images/Feature Polarity Density Charts.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Sentiment Analysis of Online Platforms</div>
+                              <p class="text-gray-700 text-base">
+                                A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on. 
+                              </p>
+                            </div>
+                            <div class="ml-5">
+                                <button class="opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg>
+                                    <span>Report</span>
+                                </button>
+                            </div>
+                            <div class="px-6 pt-4 pb-2">
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Pandas</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Spark</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Plotly</span>
+                            </div>
+                          </div>
+
+                        <!-- Card Two -->
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                            <img class="w-full h-48" src="../images/Feature Polarity Density Charts.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Sentiment Analysis of Online Platforms</div>
+                              <p class="text-gray-700 text-base">
+                                A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on. 
+                              </p>
+                            </div>
+                            <div class="ml-5">
+                                <button class="opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg>
+                                    <span>Report</span>
+                                </button>
+                            </div>
+                            <div class="px-6 pt-4 pb-2">
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Pandas</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Spark</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Plotly</span>
+                            </div>
+                          </div>
+
+                        <!-- Card Three -->
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-slate-900 text-stone-50">
+                            <img class="w-full h-48" src="../images/Feature Polarity Density Charts.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">Sentiment Analysis of Online Platforms</div>
+                              <p class="text-gray-50 text-base">
+                                A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on. 
+                              </p>
+                            </div>
+
+                            <div class="px-6 pt-4 pb-2">
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Python</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Pandas</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Spark</span>
+                              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Plotly</span>
+                            </div>
+
+                            <div class="ml-6 pb-5">
+                                <button class=" opacity-80 hover:opacity-100 hover:bg-gray-300 text-gray-400 hover:text-slate-800 border-2 border-gray-400 text-xs font-medium py-1 px-4 rounded-full inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg>
+                                    <span>Download Report</span>
+                                </button>
+                            </div>
+
+                          </div>
+
                     </div>
                 </div>
-                <div class="h-96 bg-stone-50 p-10 divide-y-2 divide-med-gold/25">
+                <div class="p-10 divide-y-2 divide-med-gold/25">
                     <div class="mb-2">
-                        <h1 class="text-4xl text-slate-900 font-extrabold">Development</h1>
+                        <h1 class="text-4xl text-slate-800 font-extrabold">Development</h1>
                         <h1 class="text-xl text-xl text-transparent bg-clip-text bg-gradient-to-r 
                         from-med-gold via-light-gold to-dark-gold">Blazingly Fast, Sometimes</h1>
                     </div>
@@ -187,9 +347,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="h-96 bg-stone-50 p-10 divide-y-2 divide-med-gold/25">
+                <div class="p-10 divide-y-2 divide-med-gold/25">
                     <div class="mb-2">
-                        <h1 class="text-4xl text-slate-900 font-extrabold">Marketing</h1>
+                        <h1 class="text-4xl text-slate-800 font-extrabold">Marketing</h1>
                         <h1 class="text-xl text-xl text-transparent bg-clip-text bg-gradient-to-r 
                         from-med-gold via-light-gold to-dark-gold">Aim For Fame</h1>
                     </div>
