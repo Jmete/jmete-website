@@ -23,8 +23,13 @@ function showToast(type){
 
 }
 
+function testAlert(){
+    alert("this is a test in the main js file");
+}
+
 async function submitForm(e){
 
+    alert("this is a test!");
     // Prevent the form from submitting and refreshing the page
     e.preventDefault();
 
@@ -38,7 +43,7 @@ async function submitForm(e){
         showToast("error");
     }
     try {
-        const { data } = await axios.post('192.168.8.126:4000/api/email', {
+        const { data } = await axios.post('/api/email', {
             nameValue,
             emailValue,
             messageValue,

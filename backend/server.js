@@ -1,23 +1,30 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const mg = require('mailgun-js');
+const cors = require('cors');
+var sanitizer = require('sanitizer');
+const sgMail = require('@sendgrid/mail')
 
 dotenv.config();
 
-const mailgun = () => mg({
-    apiKey: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_DOMAIN,
-});
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const app = express();
+
+app.use(cors({
+    origin: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.post('/api/email', (req, res) => {
-    const {nameValue, emailValue, messageValue} = req.body;
-    mailgun().messages().send({
-        from: 'James Website <contact@jamesmete.com>',
-        to: `${emailValue}`,
+    const nameValue = sanitizer.sanitize(req.body.name);
+    const emailValue = sanitizer.sanitize(req.body.email);
+    const messageValue = sanitizer.sanitize(req.body.message);
+
+    sgMail.send({
+        from: 'James Website <james@jamesmete.com>',
+        to: 'james@jamesmete.com',
         subject: "James Website Contact Form",
         html: `
         <h1>Name:</h1>
@@ -41,7 +48,7 @@ app.post('/api/email', (req, res) => {
     );
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Serving at http://localhost:${port}`);
 });

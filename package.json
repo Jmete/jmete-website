@@ -1,9 +1,30 @@
 {
-  "name": "james-mete-website",
-  "devDependencies": {
-    "tailwindcss": "^3.1.4"
+  "name": "jmete-website",
+  "version": "1.0.0",
+  "proxy":"http://localhost:4000/",
+  "description": "Personal website of James Mete for jamesmete.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jmete/jmete-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jmete/jmete-website/issues"
+  },
+  "homepage": "https://github.com/Jmete/jmete-website#readme",
   "dependencies": {
-    "tw-elements": "^1.0.0-alpha12"
+    "astro": "^1.0.0-beta.73"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^0.2.4"
   }
 }
