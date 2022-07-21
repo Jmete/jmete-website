@@ -606,7 +606,6 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" is:inline></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" is:inline>  </script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script type="text/javascript" is:inline>
 
@@ -619,7 +618,9 @@
                     close: true,
                     gravity: "bottom",
                     positionLeft: false,
-                    className: "alert-warning"
+                    style:{
+                      background: "linear-gradient(to right, #f87171, #ef4444)",
+                    },
                 }).showToast();
             } else{
                 Toastify({
@@ -628,7 +629,9 @@
                     close: true,
                     gravity: "bottom",
                     positionLeft: false,
-                    className: "alert-warning"
+                    style:{
+                      background: "linear-gradient(to right, #4ade80, #22c55e)",
+                    },
                 }).showToast();
             }
 
