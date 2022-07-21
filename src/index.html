@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/output/output.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200..900">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -74,13 +75,14 @@
 
                 <!-- Header-buttons -->
                 <div class="py-4">
-
-                    <button type="button" class="opacity-80 hover:opacity-100 hover:bg-slate-200 text-slate-100 hover:text-slate-800 border-2 border-slate-100 font-bold py-2 px-5 rounded-full inline-flex items-center"  data-bs-toggle="modal" data-bs-target="#contactModal">
+                  <a href="#contact">
+                    <button type="button" class="opacity-80 hover:opacity-100 hover:bg-slate-200 text-slate-100 hover:text-slate-800 border-2 border-slate-100 font-bold py-2 px-5 rounded-full inline-flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                         </svg>
                         <span>Contact</span>
                     </button>
+                  </a>
                     
                     <a href="files/James Mete Resume.pdf">
                         <button class="opacity-80 hover:opacity-100 hover:bg-slate-200 text-slate-100 hover:text-slate-800 border-2 border-slate-100 font-bold py-2 px-5 rounded-full inline-flex items-center">
@@ -461,7 +463,7 @@
 
                     <!-- END CARD ROW -->
                 </div>
-                <div class="p-6 md:p-10 divide-y-2 divide-med-gold/25">
+                <div class="px-6 pt-6 pb-10 md:px-10 md:pt-10 md:pb-16 divide-y-2 divide-med-gold/25">
                     <div class="mb-2">
                         <h1 class="text-4xl text-slate-800 font-extrabold">Marketing & Design</h1>
                         <h1 class="text-xl text-xl text-transparent bg-clip-text bg-gradient-to-r 
@@ -551,40 +553,69 @@
                     <!-- END CARD ROW -->
                 </div>
 
-                <!-- Contact Modal -->
-                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
-                id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-                <div class="modal-dialog relative w-auto pointer-events-none">
-                    <div
-                    class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-stone-50 bg-clip-padding rounded-md outline-none text-current">
-                    <div
-                        class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
-                        <h5 class="leading-normal italic font-extrabold text-2xl
-                        text-slate-900" id="contactModalLabel">Contact Me</h5>
-                        <button type="button"
-                        class="btn-close box-content w-4 h-4 p-1 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body relative p-4">
-                        Modal body text goes here.
-                    </div>
-                    <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 rounded-b-md">
-                        <button type="button" class=" hover:bg-green-400 text-green-400 hover:text-stone-50 border-2 border-green-400 font-bold py-2 px-5 rounded-full inline-flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
-                            </svg>
-                            <span>Send</span>
-                        </button>
-                    </div>
-                    </div>
-                </div>
-                </div>
+                <div id="contact" class="p-6 md:p-10 divide-y-2 divide-med-gold/25 bg-stone-200">
+                  <div class="mb-2">
+                      <h1 class="text-4xl text-slate-800 font-extrabold">Contact Me</h1>
+                      <h1 class="text-xl text-xl text-transparent bg-clip-text bg-gradient-to-r 
+                      from-med-gold via-light-gold to-dark-gold">Better Together</h1>
+                  </div>
+                  <!-- BEGIN CARD ROW -->
+                  <form id="contact-form" class="py-4 w-full" onSubmit="submitForm(event)">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 -mx-3 mb-6">
 
+                      <div class="w-full px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="contact-name">
+                          Full Name
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="contact-name" type="text" placeholder="First Name Last Name" required>
+                      </div>
+
+                      <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="contact-email">
+                          E-mail
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="contact-email" type="email" placeholder="Where can I contact you?" required>
+                      </div>
+
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="contact-message">
+                          Message
+                        </label>
+                        <textarea class=" no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="contact-message" placeholder="What's on your mind?" required></textarea>
+                      </div>
+                    </div>
+                    <div class="md:flex md:items-center">
+                      <div class="md:w-1/3">
+                        <button type="submit" class="hover:bg-green-500 bg-green-400 text-stone-50 font-bold py-2 px-5 rounded-full inline-flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                          </svg>
+                          <span>Send</span>
+                      </button>
+                      </div>
+                      <div class="md:w-2/3"></div>
+                    </div>
+                  </form>
+
+                  <!-- END CARD ROW -->
+              </div>
+
+              <button type="button" onclick="showToast()" class="hover:bg-green-500 bg-green-400 text-stone-50 font-bold py-2 px-5 rounded-full inline-flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class=" w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                  </svg>
+                  <span>Send</span>
+              </button>
 
             </main>
         </div>
         
-        <script src="js/main.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="js/main.js"></script>
         <script src="js/index.min.js"></script>
     </body>
 </html>
