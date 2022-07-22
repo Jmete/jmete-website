@@ -1,7 +1,6 @@
 {
   "name": "jmete-website",
   "version": "1.0.0",
-  "proxy":"http://localhost:4000/",
   "description": "Personal website of James Mete for jamesmete.com",
   "main": "index.js",
   "scripts": {
