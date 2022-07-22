@@ -22,7 +22,7 @@ const app = express();
 // enable cors
 app.use(
     cors({
-      origin: ['http://localhost','165.227.47.167'],
+      origin: ['http://localhost','http://165.227.47.167'],
       optionsSuccessStatus: 200,
       credentials: true,
     })
@@ -30,7 +30,7 @@ app.use(
   app.options(
     '*',
     cors({
-      origin: ['http://localhost','165.227.47.167'],
+      origin: ['http://localhost','http://165.227.47.167'],
       optionsSuccessStatus: 200,
       credentials: true,
     })
