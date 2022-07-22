@@ -640,7 +640,7 @@
 
             console.log("attempting post");
             
-            const res = await axios.post('http://127.0.0.1:3001/api/emailses', {
+            const res = await axios.post('http://localhost:3001/api/email', {
               name: nameValue,
               email: emailValue,
               message:messageValue,})
