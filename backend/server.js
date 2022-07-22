@@ -19,9 +19,22 @@ const ses = new AWS.SES();
 
 const app = express();
 
-app.use(cors({
-    origin: true
-}));
+// enable cors
+app.use(
+    cors({
+      origin: ['http://localhost','165.227.47.167'],
+      optionsSuccessStatus: 200,
+      credentials: true,
+    })
+  );
+  app.options(
+    '*',
+    cors({
+      origin: ['http://localhost','165.227.47.167'],
+      optionsSuccessStatus: 200,
+      credentials: true,
+    })
+  );
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
