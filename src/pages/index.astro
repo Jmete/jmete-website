@@ -660,12 +660,14 @@
                 showToast("error");
             }
 
-            console.log("attempting post");
-            
-            const res = await axios.post('http://165.227.47.167:3001/api/email', {
-              name: nameValue,
-              email: emailValue,
-              message:messageValue,})
+            console.log("Attempting post...");
+            // 'http://165.227.47.167:3001/api/email'
+            const res = await axios.post('https://klbv6ea3x5.execute-api.us-east-1.amazonaws.com/PostAPIfinal/lambda-ses', 
+            {
+              contactName: nameValue,
+              contactEmail: emailValue,
+              contactMessage:messageValue,
+            })
               .then(response => {
                 console.log(response)
                 showToast();

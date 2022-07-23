@@ -7,14 +7,20 @@
 
 var aws = require("aws-sdk");
 var ses = new aws.SES({ region: "us-east-1" });
+
 exports.handler = async function (event) {
+  
+  // The post request we get needs to be parsed.
+  var jsonevent = JSON.parse(event.body);
+  console.log(jsonevent);
+  
   var htmlmessage = `
     <h1>Name:</h1>
-    <p>${event.nameValue}</p>
+    <p>${jsonevent.contactName}</p>
     <h1>Email:</h1>
-    <p>${event.emailValue}</p>
+    <p>${jsonevent.contactEmail}</p>
     <h1>Message:</h1>
-    <p>${event.messageValue}</p>
+    <p>${jsonevent.contactMessage}</p>
     `    
   var params = {
     Destination: {
