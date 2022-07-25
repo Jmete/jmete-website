@@ -8,6 +8,9 @@ module.exports = {
 				'light-gold':'#eaba6f',
 				'med-gold':'#ce9b4b',
 			},
+			screens:{
+				'md': '900px',
+			},
 		},
 	},
 	fontFamily:{
