@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@astrojs/partytown": "^0.1.8",
+    "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^0.2.4"
   }
 }
