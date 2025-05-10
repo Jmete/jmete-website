@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardContent>
       <CardFooter className="p-5 pt-0">
-        <a href={project.link} className="flex items-center text-[#2c4dd5] font-medium hover:underline">
+        <a href={project.link} className="flex items-center text-[#2c4dd5] dark:text-[#60a5fa] font-medium hover:underline dark:hover:text-[#93c5fd] transition-colors">
           View Project <ArrowRight size={16} className="ml-1" />
         </a>
       </CardFooter>

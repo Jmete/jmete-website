@@ -8,7 +8,7 @@ export default function ProfileSection() {
   return (
     <div className="sticky top-8 space-y-6">
       <div className="flex flex-col items-center md:items-start">
-        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#2c4dd5] mb-4">
+        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#2c4dd5] dark:border-[#60a5fa] mb-4">
           <Image
             src="/images/profile/james-mete.jpg"
             alt="James Mete"
@@ -21,7 +21,7 @@ export default function ProfileSection() {
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#333333] dark:text-[#E0E0E0] mb-1">
           James Mete
         </h1>
-        <h2 className="text-xl font-medium tracking-tight text-[#2c4dd5]">
+        <h2 className="text-xl font-medium tracking-tight text-[#2c4dd5] dark:text-[#60a5fa]">
           Data Driven Decisions
         </h2>
       </div>
@@ -45,7 +45,7 @@ export default function ProfileSection() {
 
       <div className="flex flex-col space-y-3 mt-6">
         <ContactModal
-          triggerClassName="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90"
+          triggerClassName="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90 dark:bg-[#3b82f6] dark:hover:bg-[#2563eb]"
           buttonText="Contact Me"
         />
         <Link
@@ -55,7 +55,7 @@ export default function ProfileSection() {
         >
           <Button
             variant="outline"
-            className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:text-[#2c4dd5] dark:border-[#2c4dd5]"
+            className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:border-[#60a5fa] dark:text-[#60a5fa] dark:hover:bg-[#60a5fa]/20"
           >
             Resume
           </Button>
