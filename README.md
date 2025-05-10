@@ -1,2 +1,3 @@
 # jmete-website
-Personal website of James Mete for jamesmete.com
+
+Personal site of James Mete.
