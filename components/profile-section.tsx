@@ -8,11 +8,13 @@ export default function ProfileSection() {
   return (
     <div className="sticky top-8 space-y-6">
       <div className="flex flex-col items-center md:items-start">
-        <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[#2c4dd5] mb-4">
+        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#2c4dd5] mb-4">
           <Image
-            src="/placeholder.svg?height=128&width=128"
+            src="/images/profile/james-mete.jpg"
             alt="James Mete"
             fill
+            sizes="160px"
+            priority
             className="object-cover"
           />
         </div>
@@ -26,8 +28,9 @@ export default function ProfileSection() {
 
       <div className="mt-6">
         <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed">
-          Hello, I'm a Canadian data scientist with 10+ years leading digital
-          transformation initiatives and implementing AI/ML solutions.
+          Hello, I'm a Canadian data scientist with 10+ years of experience
+          leading digital transformation initiatives and implementing AI/ML
+          solutions.
         </p>
         <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed mt-3">
           I manage cross-functional teams to build scalable data pipelines,

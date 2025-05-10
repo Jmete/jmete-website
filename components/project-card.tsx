@@ -19,8 +19,15 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-md border-none">
-      <div className="relative h-48 w-full">
-        <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+      <div className="relative w-full aspect-[3/2] overflow-hidden">
+        <Image 
+          src={project.image || "/placeholder.svg"} 
+          alt={project.title} 
+          fill 
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+          loading="lazy"
+        />
       </div>
       <CardContent className="flex-grow p-5">
         <h3 className="text-xl font-semibold text-[#333333] dark:text-[#E0E0E0] mb-2">{project.title}</h3>
@@ -39,4 +46,3 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     </Card>
   )
 }
-
