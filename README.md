@@ -19,7 +19,7 @@ cd jmete-website
 
 2. Install dependencies:
 ```bash
-pnpm install
+pnmp install
 ```
 
 3. Environment Variables:
@@ -38,6 +38,22 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## AWS SES Integration
+
+The contact form integrates with AWS SES through a Lambda function. The file `lambdases.awslambda` in this repository contains the Lambda function code that needs to be deployed to AWS.
+
+### Deploying the Lambda Function:
+
+1. Open the AWS Lambda console
+2. Create a new Lambda function (if not already created)
+3. Copy the entire contents of `lambdases.awslambda` file
+4. Paste it into the Lambda function code editor
+5. Click "Deploy" to save the changes
+6. Note down the API Gateway URL for your Lambda function
+7. Use this URL as the value for `CONTACT_FORM_ENDPOINT` in your environment variables
+
+**Important**: The `lambdases.awslambda` file is only a template - it must be manually copied and deployed to AWS Lambda to work.
 
 ## Deployment on Vercel
 

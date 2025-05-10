@@ -14,27 +14,127 @@ exports.handler = async function (event) {
   var jsonevent = JSON.parse(event.body);
   console.log(jsonevent);
   
+  // Create a more aesthetically pleasing email template
   var htmlmessage = `
-    <h1>Name:</h1>
-    <p>${jsonevent.contactName}</p>
-    <h1>Email:</h1>
-    <p>${jsonevent.contactEmail}</p>
-    <h1>Message:</h1>
-    <p>${jsonevent.contactMessage}</p>
-    `    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Form Submission</title>
+      <style>
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          line-height: 1.6;
+          color: #333;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .container {
+          border-radius: 8px;
+          border: 1px solid #e0e0e0;
+          overflow: hidden;
+        }
+        .header {
+          background-color: #2c4dd5;
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        .content {
+          padding: 30px;
+          background-color: #f9f9f9;
+        }
+        h1 {
+          margin: 0;
+          font-size: 22px;
+          font-weight: 600;
+        }
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+          color: #2c4dd5;
+          margin-top: 25px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #eaeaea;
+          padding-bottom: 8px;
+        }
+        p {
+          margin: 8px 0 16px 0;
+        }
+        .message-content {
+          background-color: white;
+          padding: 15px;
+          border-radius: 4px;
+          border: 1px solid #eaeaea;
+          white-space: pre-wrap;
+        }
+        .footer {
+          text-align: center;
+          padding: 15px;
+          font-size: 12px;
+          color: #666;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>New Contact Form Submission</h1>
+        </div>
+        <div class="content">
+          <h2>Name</h2>
+          <p>${jsonevent.contactName}</p>
+          
+          <h2>Email</h2>
+          <p><a href="mailto:${jsonevent.contactEmail}">${jsonevent.contactEmail}</a></p>
+          
+          <h2>Message</h2>
+          <div class="message-content">${jsonevent.contactMessage.replace(/\n/g, '<br>')}</div>
+        </div>
+        <div class="footer">
+          This message was sent from the contact form on jamesmete.com
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+  
+  // Create a plain text version for email clients that don't support HTML
+  var plainTextMessage = `
+New Contact Form Submission
+
+Name: ${jsonevent.contactName}
+
+Email: ${jsonevent.contactEmail}
+
+Message:
+${jsonevent.contactMessage}
+
+---
+This message was sent from the contact form on jamesmete.com
+  `;
+  
   var params = {
     Destination: {
       ToAddresses: ["james@jamesmete.com"],
     },
     Message: {
       Body: {
-        Html: { Charset: 'UTF-8', Data: htmlmessage },
+        Html: { 
+          Charset: 'UTF-8', 
+          Data: htmlmessage 
+        },
+        Text: {
+          Charset: 'UTF-8',
+          Data: plainTextMessage
+        }
       },
-
       Subject: { Data: "James Website Contact Form" },
     },
     Source: "James-Website <james@jamesmete.com>",
   };
  
-  return ses.sendEmail(params).promise()
+  return ses.sendEmail(params).promise();
 };
