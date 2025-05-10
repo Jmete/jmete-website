@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata = {
   title: "James Mete - Data Scientist & Project Manager",
   description: "Portfolio of James Mete, a data scientist with international business experience.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="fixed top-4 right-4 z-50">
             <ThemeToggle />
@@ -34,4 +34,3 @@ export default function RootLayout({
     </html>
   )
 }
-

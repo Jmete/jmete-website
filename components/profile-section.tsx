@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { SocialIcons } from "@/components/social-icons"
+import { ContactModal } from "@/components/contact-modal"
 
 export default function ProfileSection() {
   return (
@@ -28,7 +29,10 @@ export default function ProfileSection() {
       </div>
 
       <div className="flex flex-col space-y-3 mt-6">
-        <Button className="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90">Contact Me</Button>
+        <ContactModal 
+          triggerClassName="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90"
+          buttonText="Contact Me"
+        />
         <Button
           variant="outline"
           className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:text-[#2c4dd5] dark:border-[#2c4dd5]"
@@ -43,4 +47,3 @@ export default function ProfileSection() {
     </div>
   )
 }
-
