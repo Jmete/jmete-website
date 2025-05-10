@@ -15,7 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { CheckCircle, AlertCircle } from 'lucide-react';
+import { CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 // Form validation schema
 const formSchema = z.object({
@@ -66,7 +66,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
       
       // Handle success
       setSubmitStatus('success');
-      setStatusMessage(result.message || 'Thank you for your message!');
+      setStatusMessage(result.message || 'Thank you for your message! I will get back to you soon.');
       form.reset();
       
       // Call the success callback if provided
@@ -91,16 +91,16 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         {submitStatus === 'success' && (
-          <div className="p-3 bg-green-50 border border-green-200 rounded-md flex items-start space-x-3">
-            <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-            <p className="text-green-700 text-sm">{statusMessage}</p>
+          <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md flex items-start space-x-3">
+            <CheckCircle className="h-5 w-5 text-green-500 dark:text-green-400 flex-shrink-0 mt-0.5" />
+            <p className="text-green-700 dark:text-green-300 text-sm">{statusMessage}</p>
           </div>
         )}
         
         {submitStatus === 'error' && (
-          <div className="p-3 bg-red-50 border border-red-200 rounded-md flex items-start space-x-3">
-            <AlertCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
-            <p className="text-red-700 text-sm">{statusMessage}</p>
+          <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md flex items-start space-x-3">
+            <AlertCircle className="h-5 w-5 text-red-500 dark:text-red-400 flex-shrink-0 mt-0.5" />
+            <p className="text-red-700 dark:text-red-300 text-sm">{statusMessage}</p>
           </div>
         )}
 
@@ -155,7 +155,12 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           className="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting ? (
+            <span className="flex items-center">
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Sending...
+            </span>
+          ) : 'Send Message'}
         </Button>
       </form>
     </Form>
