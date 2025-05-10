@@ -1,5 +1,5 @@
-import ProfileSection from "@/components/profile-section"
-import ProjectsSection from "@/components/projects-section"
+import ProfileSection from "@/components/profile-section";
+import ProjectsSection from "@/components/projects-section";
 
 export default function Home() {
   return (
@@ -15,6 +15,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  )
+  );
 }
-

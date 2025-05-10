@@ -1,71 +1,131 @@
-import ProjectCard from "@/components/project-card"
+import ProjectCard from "@/components/project-card";
 
 const projects = [
   {
     id: 1,
-    title: "Customer Segmentation Analysis",
+    title: "Predicting Youtube Dislikes",
     description:
-      "Developed a machine learning model to segment customers based on purchasing behavior, enabling targeted marketing campaigns.",
+      "A complete machine learning pipeline to download / scrape, process, and analyze millions of Youtube data to train a model to predict dislikes and alert the user if a video is potentially probelmatic through a webapp that can process submitted videos.",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["Python", "ML/AI", "Data Analysis", "Clustering"],
+    link: "https://www.savethedislikes.com/",
+    topics: ["Python", "ML/AI", "Data Analysis", "Big Data", "SQL"],
   },
   {
     id: 2,
-    title: "Sales Prediction Dashboard",
+    title: "Sentiment Analysis of Online Platforms",
     description:
-      "Created an interactive dashboard to visualize sales predictions and trends, helping stakeholders make informed decisions.",
+      "A study of over 1.2 billion raw twitter posts, amazon reviews, and reddit posts utilizing sentiment and keyword analysis to discover important themes each platform focuses their attention on.",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["Tableau", "Data Visualization", "Forecasting"],
+    link: "/documents/Sentiment%20Analysis%20between%20Product%20Reviews%20and%20Social%20Media%20Platforms%20-stanhung-jmete.pdf",
+    topics: [
+      "Python",
+      "Data Visualization",
+      "Big Data",
+      "Spark",
+      "Pandas",
+      "Clustering",
+    ],
   },
   {
     id: 3,
-    title: "Supply Chain Optimization",
+    title: "Predicting Text Difficulty",
     description:
-      "Optimized inventory management and distribution network, resulting in 15% cost reduction and improved delivery times.",
+      "Machine learning pipeline utilizing both supervised and unsupervised learning to classify sentences into whether or not they require simplification. Fine-tuned BERT model scored 77.6% on the test set, claiming second place in the associated Kaggle competition.",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["Project Management", "Optimization", "Supply Chain"],
+    link: "/documents/Predicting%20Text%20Difficulty%20-%20Project%20Report%20-%20jmete-mattdann.pdf",
+    topics: ["Python", "AI/ML", "NLP", "LLM"],
   },
   {
     id: 4,
-    title: "Sentiment Analysis Tool",
+    title: "Open Assistant",
     description:
-      "Built a natural language processing tool to analyze customer feedback and social media mentions for brand sentiment.",
+      "Open-Assistant was one of the first open-source alternatives to chatGPT. My main focus was on working with the data team to write data-collection and processing scripts to create high-quality datasets to train the LLM.",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["Python", "NLP", "ML/AI", "Big Data"],
+    link: "https://github.com/LAION-AI/Open-Assistant",
+    topics: ["Python", "AI/ML", "Gen AI", "LLM", "Big Data", "Open Source"],
   },
   {
     id: 5,
-    title: "Predictive Maintenance System",
-    description: "Implemented a predictive maintenance system for manufacturing equipment, reducing downtime by 30%.",
+    title: "AI Document Automation / PDF Annotation Tool",
+    description:
+      "Built a custom PDF annotation tool to optimize sales document processing. Furthermore, the data collected via the program is stored and used to train a fine-tuned data extraction model to automate document processing",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["IoT", "ML/AI", "Time Series Analysis"],
+    link: "https://github.com/Jmete/pdf-data-py",
+    topics: [
+      "Python",
+      "AI/ML",
+      "Data Processing",
+      "Software Engineering",
+      "Automation",
+      "Open Source",
+    ],
   },
   {
     id: 6,
-    title: "Market Basket Analysis",
+    title: "Sawab (E-Commerce Site)",
     description:
-      "Analyzed transaction data to identify product associations and optimize store layout and promotional strategies.",
+      "I was a core team member to launch sawab.app (originally called ejawda.com), a new e-commerce platform for the industrial sector in the GCC. This involved providing analytical and project management support to align all stakeholders to meet our milestones on-time and within budget.",
     image: "/placeholder.svg?height=300&width=400",
-    link: "#",
-    topics: ["Python", "Association Rules", "Data Mining"],
+    link: "https://sawab.app/?lang=en",
+    topics: [
+      "Project Management",
+      "Business Analysis",
+      "Digital Transformation",
+    ],
   },
-]
+  {
+    id: 7,
+    title: "ERP Implementation",
+    description:
+      "Lead the implementation of a new enterprise resource planning solution (Odoo) at Sherbiny. This included working with stakeholders, partners, and developers to implement all necessary modules, as well as set up corporate dashboards and other features to greatly enhance our organizational efficiency.",
+    image: "/placeholder.svg?height=300&width=400",
+    link: "https://www.odoo.com/",
+    topics: [
+      "Project Management",
+      "ERP",
+      "SQL",
+      "Python",
+      "Digital Transformation",
+      "Business Intelligence",
+    ],
+  },
+  {
+    id: 8,
+    title: "IT / OT Infrastructure Plan",
+    description:
+      "IT / OT infrastructure plan for the new Sherbiny HQ development including networking, security, servers, smart meeting rooms, future factory initiative, intelligent warehousing & manufacturing, as well as integration with other locations using zero-trust SD-WAN / SASE solutions.",
+    image: "/placeholder.svg?height=300&width=400",
+    link: "https://sherbiny.com/",
+    topics: [
+      "IT",
+      "Networking",
+      "Digital Transformation",
+      "Project Management",
+      "Automation",
+    ],
+  },
+  {
+    id: 9,
+    title: "Meeting Timer App",
+    description:
+      "I created a minimalist timer that is better for developers that uses JSON to store meeting templates to allow for hot swapping between different meeting structures by just editing text files that I can maintain. The timer largely is built using React for smooth client-side actions.",
+    image: "/placeholder.svg?height=300&width=400",
+    link: "https://timer.jamesmete.com/",
+    topics: ["Javascript", "React", "Front-End", "JSON"],
+  },
+];
 
 export default function ProjectsSection() {
   return (
     <div>
-      <h2 className="text-2xl font-bold tracking-tight text-[#333333] dark:text-[#E0E0E0] mb-6">Projects</h2>
+      <h2 className="text-2xl font-bold tracking-tight text-[#333333] dark:text-[#E0E0E0] mb-6">
+        Projects
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </div>
-  )
+  );
 }
-
