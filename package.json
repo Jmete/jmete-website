@@ -1,6 +1,6 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "jmete-website",
+  "version": "20250510",
   "private": true,
   "scripts": {
     "dev": "next dev",
