@@ -39,7 +39,7 @@ const projects = [
     id: 4,
     title: "Open Assistant",
     description:
-      "Open-Assistant was one of the first open-source alternatives to chatGPT. My main focus was on working with the data team to write data-collection and processing scripts to create high-quality datasets to train the LLM.",
+      "Open-Assistant was one of the first open-source alternatives to chatGPT. Worked on the data team to write data-collection and processing scripts involving billions of records to create high-quality datasets to train the AI model.",
     image: "/images/projects/open-assistant.jpg",
     link: "https://github.com/LAION-AI/Open-Assistant",
     topics: ["Python", "AI/ML", "Gen AI", "LLM", "Big Data", "Open Source"],
