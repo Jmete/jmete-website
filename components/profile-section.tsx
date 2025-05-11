@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { SocialIcons } from "@/components/social-icons";
 import { ContactModal } from "@/components/contact-modal";
-import Link from "next/link";
 
 export default function ProfileSection() {
   return (
@@ -48,7 +47,7 @@ export default function ProfileSection() {
           triggerClassName="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90 dark:bg-[#3b82f6] dark:hover:bg-[#2563eb]"
           buttonText="Contact Me"
         />
-        <Link
+        <a
           href="/documents/James%20Mete%20Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
@@ -59,7 +58,7 @@ export default function ProfileSection() {
           >
             Resume
           </Button>
-        </Link>
+        </a>
       </div>
 
       <div className="flex justify-center md:justify-start mt-6">
