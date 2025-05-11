@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { SocialIcons } from "@/components/social-icons";
 import { ContactModal } from "@/components/contact-modal";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function ProfileSection() {
   return (
@@ -53,6 +54,12 @@ export default function ProfileSection() {
           rel="noopener noreferrer"
         >
           <Button
+            onClick={() =>
+              sendGTMEvent({
+                event: "buttonClicked",
+                value: "Resume Downloaded",
+              })
+            }
             variant="outline"
             className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:border-[#60a5fa] dark:text-[#60a5fa] dark:hover:bg-[#60a5fa]/20"
           >
