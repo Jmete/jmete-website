@@ -1,20 +1,9 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { SocialIcons } from "@/components/social-icons";
 import { ContactModal } from "@/components/contact-modal";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function ProfileSection() {
-  const handleClick = () => {
-    console.log("Resume Download button clicked"); // debug log
-    sendGTMEvent({
-      event: "buttonClicked",
-      value: "Resume Downloaded",
-    });
-  };
-
   return (
     <div className="sticky top-8 space-y-6">
       <div className="flex flex-col items-center md:items-start">
@@ -64,7 +53,6 @@ export default function ProfileSection() {
           rel="noopener noreferrer"
         >
           <Button
-            onClick={handleClick}
             variant="outline"
             className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:border-[#60a5fa] dark:text-[#60a5fa] dark:hover:bg-[#60a5fa]/20"
           >
