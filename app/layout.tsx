@@ -18,7 +18,7 @@ export const metadata = {
   title:
     "James Mete - 10+ Years of Digital Transformation and Data Science Leadership",
   description:
-    "Portfolio of James Mete, a data scientist with international business experience.",
+    "Portfolio of James Mete, 10+ Years of Digital Transformation and Data Science Leadership.",
 };
 
 export default function RootLayout({
