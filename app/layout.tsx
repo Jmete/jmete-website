@@ -15,10 +15,10 @@ const inter = Inter({
 const GOOGLE_TAG_MANAGER = process.env.GOOGLE_TAG_MANAGER_ID as string;
 
 export const metadata = {
-  title: "James Mete - Data Scientist & Project Manager",
+  title:
+    "James Mete - 10+ Years of Digital Transformation and Data Science Leadership",
   description:
     "Portfolio of James Mete, a data scientist with international business experience.",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

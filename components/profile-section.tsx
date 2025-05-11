@@ -56,7 +56,7 @@ export default function ProfileSection() {
             variant="outline"
             className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:border-[#60a5fa] dark:text-[#60a5fa] dark:hover:bg-[#60a5fa]/20"
           >
-            Resume
+            Résumé
           </Button>
         </a>
       </div>
