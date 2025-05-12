@@ -32,9 +32,9 @@ export default function ProfileSection() {
           solutions.
         </p>
         <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed mt-3">
-          I manage cross-functional teams to build scalable data pipelines,
-          automated LLM systems, and interactive dashboards to transform data
-          into strategic business intelligence.
+          I manage cross-functional teams to build scalable IT infrastructure,
+          data pipelines, automated LLM systems, and interactive dashboards to
+          transform data into strategic business intelligence.
         </p>
         <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed mt-3">
           Have a look at some of my projects, and let's make things better
