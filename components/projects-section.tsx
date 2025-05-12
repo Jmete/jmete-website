@@ -64,7 +64,7 @@ const projects = [
     id: 6,
     title: "Sawab (E-Commerce Site)",
     description:
-      "I was a core team member to launch sawab.app (originally called ejawda.com), a new e-commerce platform for the industrial sector in the GCC. This involved providing analytical and project management support to align all stakeholders to meet our milestones on-time and within budget.",
+      "I was a core team member to launch sawab.app, a new e-commerce platform for the industrial sector in the GCC. This involved providing analytical and project management support to align all stakeholders to meet our milestones on-time and within budget.",
     image: "/images/projects/sawab.jpg",
     link: "https://sawab.app/?lang=en",
     topics: [
