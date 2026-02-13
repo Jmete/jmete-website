@@ -108,8 +108,8 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section className="space-y-8 rounded-2xl border border-border/70 bg-card/70 p-4 shadow-[0_24px_46px_-34px_rgba(15,23,42,0.45)] md:p-6 xl:p-7">
-      <div className="space-y-3 px-1">
+    <section className="space-y-8">
+      <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
           Portfolio
         </p>

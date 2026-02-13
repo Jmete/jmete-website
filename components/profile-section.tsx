@@ -6,9 +6,9 @@ import { ContactModal } from "@/components/contact-modal";
 export default function ProfileSection() {
   return (
     <div className="md:sticky md:top-8">
-      <section className="rounded-2xl border border-border/80 bg-card/95 p-6 shadow-[0_20px_36px_-30px_rgba(15,23,42,0.5)]">
+      <section className="space-y-7">
         <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          <div className="relative mb-5 h-40 w-40 overflow-hidden rounded-full border-4 border-primary/25">
+          <div className="relative mb-5 h-40 w-40 overflow-hidden rounded-full border-4 border-primary/20">
             <Image
               src="/images/profile/james-mete.jpg"
               alt="James Mete"
@@ -45,9 +45,9 @@ export default function ProfileSection() {
           </div>
         </div>
 
-        <div className="mt-7 flex flex-col space-y-3">
+        <div className="flex flex-col space-y-3 border-t border-border/65 pt-6">
           <ContactModal
-            triggerClassName="w-full rounded-lg bg-primary text-primary-foreground shadow-sm hover:bg-primary/90"
+            triggerClassName="w-full rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
             buttonText="Contact Me"
           />
 
@@ -58,14 +58,14 @@ export default function ProfileSection() {
           >
             <Button
               variant="outline"
-              className="w-full rounded-lg border-border bg-background/70 text-foreground hover:bg-secondary"
+              className="w-full rounded-lg border-border/70 bg-transparent text-foreground hover:bg-secondary/70"
             >
               Resume
             </Button>
           </a>
         </div>
 
-        <div className="mt-7 border-t border-border/70 pt-5">
+        <div className="border-t border-border/65 pt-5">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
             Connect
           </p>
