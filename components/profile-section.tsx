@@ -34,7 +34,7 @@ export default function ProfileSection() {
             <span className="text-primary">Team Leadership</span>
           </p>
 
-          <div className="mt-6 space-y-3 text-sm leading-7 text-muted-foreground md:text-base">
+          <div className="mt-6 w-full space-y-3 text-left text-sm leading-7 text-muted-foreground md:text-base">
             <p>
               I&apos;m a Canadian data scientist and Data/AI Director with 12+
               years of experience leading digital transformation initiatives,
@@ -76,11 +76,13 @@ export default function ProfileSection() {
           </div>
         </div>
 
-        <div className="border-t border-border/65 pt-5">
+        <div className="border-t border-border/65 pt-5 text-center md:text-left">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
             Connect
           </p>
-          <SocialIcons />
+          <div className="flex justify-center md:justify-start">
+            <SocialIcons />
+          </div>
         </div>
       </section>
     </div>
