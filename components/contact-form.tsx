@@ -152,7 +152,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
 
         <Button 
           type="submit" 
-          className="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90"
+          className="w-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
@@ -192,7 +192,7 @@ export function ContactFormSEO() {
         />
       </div>
       
-      <Button type="submit" className="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90">Send Message</Button>
+      <Button type="submit" className="w-full">Send Message</Button>
     </form>
   );
 }

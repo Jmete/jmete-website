@@ -1,13 +1,20 @@
 import type React from "react";
 import "@/app/globals.css";
-import { Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import ThemeToggle from "@/components/theme-toggle";
 import { GoogleTagManager } from "@next/third-parties/google";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
@@ -29,7 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={GOOGLE_TAG_MANAGER} />
-      <body className={`${inter.variable} font-sans`} suppressHydrationWarning>
+      <body
+        className={`${manrope.variable} ${cormorant.variable} font-sans`}
+        suppressHydrationWarning
+      >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="fixed top-4 right-4 z-50">
             <ThemeToggle />

@@ -5,65 +5,73 @@ import { ContactModal } from "@/components/contact-modal";
 
 export default function ProfileSection() {
   return (
-    <div className="sticky top-8 space-y-6">
-      <div className="flex flex-col items-center md:items-start">
-        <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[#2c4dd5] dark:border-[#60a5fa] mb-4">
-          <Image
-            src="/images/profile/james-mete.jpg"
-            alt="James Mete"
-            fill
-            sizes="160px"
-            priority
-            className="object-cover"
-          />
+    <div className="md:sticky md:top-8">
+      <section className="rounded-2xl border border-border/80 bg-card/95 p-6 shadow-[0_20px_36px_-30px_rgba(15,23,42,0.5)]">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="relative mb-5 h-40 w-40 overflow-hidden rounded-full border-4 border-primary/25">
+            <Image
+              src="/images/profile/james-mete.jpg"
+              alt="James Mete"
+              fill
+              sizes="160px"
+              priority
+              className="object-cover"
+            />
+          </div>
+
+          <h1 className="text-4xl font-semibold leading-tight text-foreground">
+            James Mete
+          </h1>
+          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            Data Driven Decisions
+          </p>
+
+          <div className="mt-6 space-y-3 text-sm leading-7 text-muted-foreground md:text-base">
+            <p>
+              I&apos;m a Canadian data scientist with 10+ years of experience
+              leading digital transformation initiatives and implementing AI/ML
+              solutions.
+            </p>
+            <p>
+              I manage cross-functional teams to build scalable IT
+              infrastructure, data pipelines, automated LLM systems, and
+              interactive dashboards that turn data into strategic business
+              intelligence.
+            </p>
+            <p>
+              Explore my work below, and if you&apos;re building something complex,
+              let&apos;s discuss it.
+            </p>
+          </div>
         </div>
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#333333] dark:text-[#E0E0E0] mb-1">
-          James Mete
-        </h1>
-        <h2 className="text-xl font-medium tracking-tight text-[#2c4dd5] dark:text-[#60a5fa]">
-          Data Driven Decisions
-        </h2>
-      </div>
 
-      <div className="mt-6">
-        <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed">
-          Hello, I'm a Canadian data scientist with 10+ years of experience
-          leading digital transformation initiatives and implementing AI/ML
-          solutions.
-        </p>
-        <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed mt-3">
-          I manage cross-functional teams to build scalable IT infrastructure,
-          data pipelines, automated LLM systems, and interactive dashboards to
-          transform data into strategic business intelligence.
-        </p>
-        <p className="text-[#333333] dark:text-[#E0E0E0] leading-relaxed mt-3">
-          Have a look at some of my projects, and let's make things better
-          together.
-        </p>
-      </div>
+        <div className="mt-7 flex flex-col space-y-3">
+          <ContactModal
+            triggerClassName="w-full rounded-lg bg-primary text-primary-foreground shadow-sm hover:bg-primary/90"
+            buttonText="Contact Me"
+          />
 
-      <div className="flex flex-col space-y-3 mt-6">
-        <ContactModal
-          triggerClassName="w-full bg-[#2c4dd5] hover:bg-[#2c4dd5]/90 dark:bg-[#3b82f6] dark:hover:bg-[#2563eb]"
-          buttonText="Contact Me"
-        />
-        <a
-          href="/documents/James%20Mete%20Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            variant="outline"
-            className="w-full border-[#2c4dd5] text-[#2c4dd5] hover:bg-[#2c4dd5]/10 dark:border-[#60a5fa] dark:text-[#60a5fa] dark:hover:bg-[#60a5fa]/20"
+          <a
+            href="/documents/James%20Mete%20Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Résumé
-          </Button>
-        </a>
-      </div>
+            <Button
+              variant="outline"
+              className="w-full rounded-lg border-border bg-background/70 text-foreground hover:bg-secondary"
+            >
+              Resume
+            </Button>
+          </a>
+        </div>
 
-      <div className="flex justify-center md:justify-start mt-6">
-        <SocialIcons />
-      </div>
+        <div className="mt-7 border-t border-border/70 pt-5">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            Connect
+          </p>
+          <SocialIcons />
+        </div>
+      </section>
     </div>
   );
 }

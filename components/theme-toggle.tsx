@@ -26,7 +26,7 @@ export default function ThemeToggle() {
     <Button 
       variant="outline" 
       size="icon" 
-      className="bg-background border-border"
+      className="h-10 w-10 rounded-full border-border/80 bg-card/95 shadow-sm backdrop-blur"
       onClick={toggleTheme}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

@@ -19,7 +19,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-manrope)", "ui-sans-serif", "sans-serif"],
+        serif: ["var(--font-cormorant)", "ui-serif", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -28,8 +29,8 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#2c4dd5",
-          foreground: "#FAFAFA",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
