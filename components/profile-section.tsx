@@ -45,24 +45,27 @@ export default function ProfileSection() {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-3 border-t border-border/65 pt-6">
-          <ContactModal
-            triggerClassName="w-full rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
-            buttonText="Contact Me"
-          />
+        <div className="border-t border-border/65 pt-6">
+          <div className="flex flex-col gap-2.5">
+            <ContactModal
+              triggerClassName="h-10 w-full rounded-md border border-primary/30 bg-primary px-4 text-sm font-semibold text-primary-foreground transition-[color,background-color,border-color,box-shadow] duration-150 hover:bg-primary/80 hover:border-primary/45 hover:shadow-sm"
+              buttonText="Contact Me"
+            />
 
-          <a
-            href="/documents/James%20Mete%20Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outline"
-              className="w-full rounded-lg border-border/70 bg-transparent text-foreground hover:bg-secondary/70"
+            <a
+              href="/documents/James%20Mete%20Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
             >
-              Resume
-            </Button>
-          </a>
+              <Button
+                variant="outline"
+                className="h-10 w-full rounded-md border-border/80 bg-transparent px-4 text-sm font-semibold text-foreground transition-[color,background-color,border-color,box-shadow] duration-150 hover:border-foreground/25 hover:bg-secondary/70 hover:shadow-sm"
+              >
+                Resume
+              </Button>
+            </a>
+          </div>
         </div>
 
         <div className="border-t border-border/65 pt-5">
