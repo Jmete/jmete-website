@@ -2,6 +2,42 @@ import ProjectCard from "@/components/project-card";
 
 const projects = [
   {
+    id: 14,
+    title: "TenderScore.AI",
+    description:
+      "TenderScore.AI is a SaaS platform that uses AI to analyze tens of thousands of government tenders and rank them against a company's profile, so teams focus on bids they are most likely to win. It surfaces fit drivers, deal breakers, timelines, and prioritized next steps to speed decisions and improve win rates.",
+    link: "https://youtu.be/dIhhRKhDVF0",
+    image: "/images/projects/tenderscore-light.png",
+    topics: ["AI/ML", "TypeScript", "SAAS", "Data"],
+  },
+  {
+    id: 5,
+    title: "AI Document Automation",
+    description:
+      "Project Genesis uses AI to transform messy RFQ and purchase order documents into clean, structured, ERP-ready data, helping teams automatically drive sales workflows, procurement actions, and invoicing with far less manual entry, fewer errors, and much faster turnaround.",
+    link: "https://youtu.be/MDEElgM2C2I",
+    image: "/images/projects/ai-doc-automation-light.png",
+    topics: [
+      "Automation",
+      "Procurement Intelligence",
+      "AI/ML",
+      "Software Engineering",
+    ],
+  },
+  {
+    id: 11,
+    title: "Flowlab",
+    description:
+      "FlowLab is an interactive app that models real workflows as networks and simulates how work moves through each stage. It uses max-flow/min-cut algorithms to identify bottlenecks and show where adding capacity will improve throughput the most.",
+    link: "https://flowlab.jamesmete.com",
+    image: "/images/projects/flowlab.png",
+    topics: [
+      "Process Optimization",
+      "Algorithm Visualization",
+      "Bottleneck Analysis",
+    ],
+  },
+  {
     id: 1,
     title: "Predicting Youtube Dislikes",
     description:
@@ -9,6 +45,15 @@ const projects = [
     link: "https://www.savethedislikes.com/",
     image: "/images/projects/save-the-dislikes.png",
     topics: ["Python", "AI/ML", "Data Analysis", "Big Data", "SQL"],
+  },
+  {
+    id: 4,
+    title: "Open Assistant",
+    description:
+      "Open-Assistant was one of the first open-source alternatives to chatGPT. As part of the data team, I wrote data-collection and processing scripts involving billions of records to create high-quality datasets to train the AI model.",
+    link: "https://github.com/LAION-AI/Open-Assistant",
+    image: "/images/projects/open-assistant.png",
+    topics: ["Python", "AI/ML", "Gen AI", "LLM", "Big Data", "Open Source"],
   },
   {
     id: 2,
@@ -36,28 +81,6 @@ const projects = [
     topics: ["Python", "AI/ML", "NLP", "LLM"],
   },
   {
-    id: 4,
-    title: "Open Assistant",
-    description:
-      "Open-Assistant was one of the first open-source alternatives to chatGPT. As part of the data team, I wrote data-collection and processing scripts involving billions of records to create high-quality datasets to train the AI model.",
-    link: "https://github.com/LAION-AI/Open-Assistant",
-    image: "/images/projects/open-assistant.png",
-    topics: ["Python", "AI/ML", "Gen AI", "LLM", "Big Data", "Open Source"],
-  },
-  {
-    id: 5,
-    title: "AI Document Automation",
-    description:
-      "This project uses AI to transform messy RFQ and purchase order documents into clean, structured, ERP-ready data, helping teams automatically drive sales workflows, procurement actions, and invoicing with far less manual entry, fewer errors, and much faster turnaround.",
-    link: "https://youtu.be/MDEElgM2C2I",
-    image: "/images/projects/ai-doc-automation-light.png",
-    topics: [
-      "Automation • Procurement Intelligence",
-      "AI/ML",
-      "Software Engineering",
-    ],
-  },
-  {
     id: 6,
     title: "Sawab (E-Commerce Site)",
     description:
@@ -71,15 +94,6 @@ const projects = [
     ],
   },
   {
-    id: 9,
-    title: "Meeting Timer App",
-    description:
-      "I created a minimalist timer that is better for developers that uses JSON to store meeting templates to allow for hot swapping between different meeting structures by just editing text files that I can maintain. The timer largely is built using React for smooth client-side actions.",
-    link: "https://timer.jamesmete.com/",
-    image: "/images/projects/meeting-timer.png",
-    topics: ["JavaScript", "React", "Front-End", "JSON"],
-  },
-  {
     id: 10,
     title: "Geocache",
     description:
@@ -87,19 +101,6 @@ const projects = [
     link: "https://www.geocache.dev/",
     image: "/images/projects/geocache-dark.png",
     topics: ["TypeScript", "Serverless", "Data"],
-  },
-  {
-    id: 11,
-    title: "Flowlab",
-    description:
-      "FlowLab is an interactive app that models real workflows as networks and simulates how work moves through each stage. It uses max-flow/min-cut algorithms to identify bottlenecks and show where adding capacity will improve throughput the most.",
-    link: "https://flowlab.jamesmete.com",
-    image: "/images/projects/flowlab.png",
-    topics: [
-      "Process Optimization",
-      "Algorithm Visualization",
-      "Bottleneck Analysis",
-    ],
   },
   {
     id: 12,
@@ -120,13 +121,13 @@ const projects = [
     topics: ["Chrome Extension", "TypeScript", "Workflow Automation"],
   },
   {
-    id: 14,
-    title: "TenderScore.AI",
+    id: 9,
+    title: "Meeting Timer App",
     description:
-      "TenderScore.AI is a SaaS platform that uses AI to rank government tenders against a company's profile, so teams focus on bids they are most likely to win. It surfaces fit drivers, deal breakers, timelines, and prioritized next steps to speed decisions and improve win rates.",
-    link: "https://youtu.be/dIhhRKhDVF0",
-    image: "/images/projects/tenderscore-light.png",
-    topics: ["AI/ML", "TypeScript", "SAAS", "Data"],
+      "I created a minimalist timer that is better for developers that uses JSON to store meeting templates to allow for hot swapping between different meeting structures by just editing text files that I can maintain. The timer largely is built using React for smooth client-side actions.",
+    link: "https://timer.jamesmete.com/",
+    image: "/images/projects/meeting-timer.png",
+    topics: ["JavaScript", "React", "Front-End", "JSON"],
   },
 ];
 

@@ -22,15 +22,23 @@ export default function ProfileSection() {
           <h1 className="text-4xl font-semibold leading-tight text-foreground">
             James Mete
           </h1>
-          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-            Data Driven Decisions
+          <p className="mt-2 whitespace-nowrap text-sm font-semibold uppercase tracking-[0.16em]">
+            <span className="text-primary">AI/ML</span>
+            <span aria-hidden="true" className="px-2 text-muted-foreground/55">
+              |
+            </span>
+            <span className="text-primary">Data Products</span>
+            <span aria-hidden="true" className="px-2 text-muted-foreground/55">
+              |
+            </span>
+            <span className="text-primary">Team Leadership</span>
           </p>
 
           <div className="mt-6 space-y-3 text-sm leading-7 text-muted-foreground md:text-base">
             <p>
-              I&apos;m a Canadian data scientist with 10+ years of experience
-              leading digital transformation initiatives and implementing AI/ML
-              solutions.
+              I&apos;m a Canadian data scientist and Data/AI Director with 12+
+              years of experience leading digital transformation initiatives,
+              building data products, and delivering production AI/ML systems.
             </p>
             <p>
               I manage cross-functional teams to build scalable IT
@@ -39,8 +47,9 @@ export default function ProfileSection() {
               intelligence.
             </p>
             <p>
-              Explore my work below, and if you&apos;re building something complex,
-              let&apos;s discuss it.
+              If you want to go from strategy to shipped product,
+              <br />
+              I&apos;d love to connect.
             </p>
           </div>
         </div>
