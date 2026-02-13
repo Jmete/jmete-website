@@ -61,14 +61,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       : "transition-transform duration-300 group-hover:scale-[1.02]"
 
   return (
-    <Card className="group flex h-full w-full max-w-[23rem] flex-col overflow-hidden rounded-xl border border-border/75 bg-card/95 transition-colors duration-200 hover:border-primary/45">
+    <Card className="group flex h-full w-full max-w-[21.5rem] flex-col overflow-hidden rounded-xl border border-border/75 bg-card/95 transition-colors duration-200 hover:border-primary/45">
       <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-muted/25">
         {project.image ? (
           <Image
             src={project.image}
             alt={`${project.title} project preview`}
             fill
-            sizes="(max-width: 768px) calc(100vw - 2rem), 23rem"
+            sizes="(max-width: 768px) calc(100vw - 2rem), 21.5rem"
             quality={70}
             loading="lazy"
             className={`${imageFitClass} ${imageMotionClass}`}

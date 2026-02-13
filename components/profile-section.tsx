@@ -22,13 +22,13 @@ export default function ProfileSection() {
           <h1 className="text-4xl font-semibold leading-tight text-foreground">
             James Mete
           </h1>
-          <p className="mt-2 whitespace-nowrap text-sm font-semibold uppercase tracking-[0.16em]">
+          <p className="mt-2 text-[0.72rem] font-semibold uppercase tracking-[0.12em] md:text-xs">
             <span className="text-primary">AI/ML</span>
-            <span aria-hidden="true" className="px-2 text-muted-foreground/55">
+            <span aria-hidden="true" className="px-1 text-muted-foreground/55">
               |
             </span>
             <span className="text-primary">Data Products</span>
-            <span aria-hidden="true" className="px-2 text-muted-foreground/55">
+            <span aria-hidden="true" className="px-1 text-muted-foreground/55">
               |
             </span>
             <span className="text-primary">Team Leadership</span>
@@ -47,9 +47,8 @@ export default function ProfileSection() {
               intelligence.
             </p>
             <p>
-              If you want to go from strategy to shipped product,
-              <br />
-              I&apos;d love to connect.
+              If you want to go from strategy to shipped product, I&apos;d love
+              to connect.
             </p>
           </div>
         </div>

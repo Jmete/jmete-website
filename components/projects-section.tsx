@@ -147,7 +147,7 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,23rem),23rem))] justify-center gap-6 xl:justify-start">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,21.5rem),21.5rem))] justify-center gap-4 xl:justify-start">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
