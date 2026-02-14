@@ -23,9 +23,9 @@ const GOOGLE_TAG_MANAGER = process.env.GOOGLE_TAG_MANAGER_ID as string;
 
 export const metadata = {
   title:
-    "James Mete - 10+ Years of Digital Transformation and Data Science Leadership",
+    "James Mete - 12+ Years of AI/ML, Data, and Digital Transformation Leadership",
   description:
-    "Portfolio of James Mete, 10+ Years of Digital Transformation and Data Science Leadership.",
+    "Portfolio of James Mete, Data & AI/ML Director | Data Products, ML Platforms, Governance/Risk | 12+ years experience",
 };
 
 export default function RootLayout({
