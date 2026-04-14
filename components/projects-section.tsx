@@ -42,7 +42,7 @@ const projects = [
     title: "Predicting Youtube Dislikes",
     description:
       "A complete machine learning pipeline to download / scrape, process, and analyze millions of Youtube data to train a model to predict dislikes and alert the user if a video is potentially probelmatic through a webapp that can process submitted videos.",
-    link: "https://github.com/Jmete/youtube-dislikes/tree/main",
+    link: "https://www.savethedislikes.com/",
     image: "/images/projects/save-the-dislikes.png",
     topics: ["Python", "AI/ML", "Data Analysis", "Big Data", "SQL"],
   },
