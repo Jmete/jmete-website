@@ -36,7 +36,7 @@ export default function ProfileSection() {
 
           <div className="mt-6 w-full space-y-3 text-left text-sm leading-7 text-muted-foreground md:text-base">
             <p>
-              I&apos;m a Canadian data scientist and Data/AI Director with 12+
+              I&apos;m a Canadian Data Scientist and Data/AI Director with 12+
               years of experience leading digital transformation initiatives,
               building data products, and delivering production AI/ML systems.
             </p>
