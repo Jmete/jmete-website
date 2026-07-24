@@ -103,6 +103,20 @@ const projects = [
     topics: ["TypeScript", "Serverless", "Data"],
   },
   {
+    id: 15,
+    title: "Toronto Map",
+    description:
+      "An interactive map comparing Toronto's TTC, GO Transit, UP Express, and planned Ontario Line network with neighbourhood population density and reported crime data. Built with MapLibre GL and open datasets, it helps users explore routes, stations, transit access, and urban patterns across the city.",
+    link: "https://toronto.jamesmete.com/",
+    image: "/images/projects/toronto_map.png",
+    topics: [
+      "Data Visualization",
+      "Interactive Map",
+      "Geospatial Analysis",
+      "Open Data",
+    ],
+  },
+  {
     id: 12,
     title: "Privacy Law Comparison",
     description:
