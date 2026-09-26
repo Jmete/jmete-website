@@ -117,6 +117,15 @@ const projects = [
     ],
   },
   {
+    id: 16,
+    title: "TimeDiff",
+    description:
+      "TimeDiff makes it easy to see what time it is for friends and colleagues around the world. Add their locations, mark when they're working, busy, sleeping, or free, and every timezone lines up side by side, so you can quickly find a good time to talk or plan something together.",
+    link: "https://timediff.jamesmete.com/",
+    image: "/images/projects/timediff.png",
+    topics: ["JavaScript", "Productivity", "Timezones", "Front-End"],
+  },
+  {
     id: 12,
     title: "Privacy Law Comparison",
     description:
